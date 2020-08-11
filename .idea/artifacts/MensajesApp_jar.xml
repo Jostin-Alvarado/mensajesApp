@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="MensajesApp:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/MensajesApp_jar</output-path>
+    <root id="archive" name="MensajesApp.jar">
+      <element id="module-output" name="MensajesApp" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/ConectorMysql/mysql-connector-java-8.0.19.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
