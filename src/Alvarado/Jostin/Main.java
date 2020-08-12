@@ -7,12 +7,5 @@ public class Main {
 
     public static void main(String[] args) throws SQLException {
 
-        Conector conector = new Conector();
-
-        try ( Connection cnx = conector.getConnection();) {
-
-        } catch (SQLException e) {
-            System.out.println(e);
-        }
     }
 }
