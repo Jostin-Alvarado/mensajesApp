@@ -8,19 +8,20 @@ public class MensajeDao {
 
     public static void registroMensaje(Mensaje msg) {
 
-        Connection dbConnect = null;
+      Conector dbConn = new Conector();
 
-        try(Connection connection = dbConnect){
-            PreparedStatement ps = null;
+        try(Connection connection = dbConn.getConnection()){
+            PreparedStatement ps;
             try{
-                String query = "INSERT INTO mensajes (mensaje, autorMensaje) VALUES (?,?)";
+
+                String query = "INSERT INTO mensajes (mensaje, autor_mensaje) VALUES (?,?)";
                 ps = connection.prepareStatement(query);
                 ps.setString(1, msg.getMensaje());
                 ps.setString(2, msg.getAutorMensaje());
                 ps.executeUpdate();
                 System.out.println("Exito al crear el mensaje");
             }catch (SQLException x){
-                System.out.println("No se pudo crear");
+                System.out.println("No se pudo crear" + x);
             }
         }catch (SQLException e){
             System.out.println(e);
