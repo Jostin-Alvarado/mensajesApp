@@ -9,7 +9,6 @@ public class Main {
     static BufferedReader leer = new BufferedReader(new InputStreamReader(System.in));
 
     public static void main(String[] args) throws IOException {
-
         menu();
     }
 
