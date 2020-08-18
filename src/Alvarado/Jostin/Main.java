@@ -59,7 +59,7 @@ public class Main {
         MensajeServicio.actualizarMensaje();
     }
 
-    public static void borrarMensaje() {
+    public static void borrarMensaje() throws IOException {
         MensajeServicio.eliminarMensaje();
     }
 

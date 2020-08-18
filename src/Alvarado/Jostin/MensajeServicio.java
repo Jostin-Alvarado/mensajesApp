@@ -29,7 +29,12 @@ public class MensajeServicio {
         MensajeDao.listarMensaje();
     }
 
-    public static void eliminarMensaje() {
+    public static void eliminarMensaje() throws IOException {
+
+        System.out.println("Digite el id del mensaje que desea eliminar.");
+        int idMensaje = Integer.parseInt(leer.readLine());
+
+        MensajeDao.eliminarMensaje(idMensaje);
 
     }
 
