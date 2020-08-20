@@ -55,7 +55,7 @@ public class Main {
         MensajeServicio.listarMensaje();
     }
 
-    public static void editarMensaje() {
+    public static void editarMensaje() throws IOException {
         MensajeServicio.actualizarMensaje();
     }
 

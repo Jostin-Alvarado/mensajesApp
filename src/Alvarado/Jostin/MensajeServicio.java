@@ -38,7 +38,19 @@ public class MensajeServicio {
 
     }
 
-    public static void actualizarMensaje() {
+    public static void actualizarMensaje() throws IOException {
 
+        System.out.println("Ingrese el nuevo mensaje.");
+        String mensaje = leer.readLine();
+
+        System.out.println("Indica el id que tiene tu mensaje viejo.");
+        int id = Integer.parseInt(leer.readLine());
+
+        Mensaje actualizar = new Mensaje();
+        actualizar.setMensaje(mensaje);
+
+        actualizar.setIdMensaje(id);
+
+        MensajeDao.actualizarMensaje(actualizar);
     }
 }
